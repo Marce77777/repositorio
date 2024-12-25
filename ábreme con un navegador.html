@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo de Navidad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('https://i.pinimg.com/originals/6d/77/8b/6d778b6d8ba68b55e3c1c19b841fa6d2.jpg'); /* Imagen de fondo relacionada con costura */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #gift-box, .container {
+            display: none;
+            text-align: center;
+        }
+
+        #gift-box {
+            background-color: #e74c3c;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #gift-box:hover {
+            background-color: #c0392b;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 600px;
+            border: 2px solid #e74c3c;
+            border-radius: 10px;
+            background-color: #0c0b0b;
+            color: #333;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            height: 100vh;
+            background-image: url('https://i.pinimg.com/originals/a6/5c/a3/a65ca3897b345130bd7489a9d8ea6c98.jpg'); /* Imagen interna de fondo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: #e74c3c;
+        }
+
+        .image {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        .phrase {
+            font-size: 1.2em;
+            margin: 20px;
+            color: #555;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div id="gift-box" onclick="openGift()">
+        🎁 ¡CLICK AQUÍ! 🎄
+    </div>
+
+    <div class="container" id="content">
+        <h1>🎄 ¡Feliz Navidad Cristian Quispe Mamani! 🎁</h1>
+        <img class="image" src="https://i.pinimg.com/originals/cc/6e/38/cc6e382dfe4d340b41f71e3abf330ad4.png" style="height: 100px; width: 100px;">
+        <p class="phrase">"Este año, no hay regalos caros... ¡solo cariño y creatividad :)!"</p>
+        <img class="image" src="https://i.pinimg.com/originals/9c/b0/32/9cb032a43ec8c607df9c7ff4efcfefe0.jpg">
+        <p class="phrase">"Te doy este vale por un abrazo... porque los abrazos no cuestan nada (y estoy quebrado)." 😂</p>
+        <img class="image" src="https://i.pinimg.com/736x/c3/45/23/c345230545342c1bba2899aeb44cd68b.jpg">
+        <p class="phrase">"Regalo de Navidad edición limitada: solo risas, cero gastos."</p>
+        <img class="image" src="https://78.media.tumblr.com/53d00b1a4ace4339b37c3cc4b82abdcb/tumblr_p04275Byje1w0jmago1_1280.gif">        
+        <div class="footer">
+            <p>✨ Este regalo está hecho con mucho cariño y poca plata. Feliz Navidad. ✨</p>
+        </div>
+    </div>
+
+    <!-- Elemento de audio -->
+    <!-- <audio id="christmas-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio> -->
+    <!-- <audio id="christmas-music" src="hhttps://youtu.be/N8NcQzMQN_U?si=5RixtF4PHu24TKkQ"></audio> -->
+    <div id="youtube-video" style="display: none; text-align: center;">
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://youtu.be/jWmFsto2OcE?si=G2HPmcotmYbSoKUA" 
+            title="Música de Navidad" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <script>
+        function openGift() {
+            // Ocultar la caja de regalo
+            document.getElementById('gift-box').style.display = 'none';
+            // Mostrar el contenido
+            document.getElementById('content').style.display = 'block';
+            // Mostrar el video de YouTube
+            document.getElementById('youtube-video').style.display = 'block';
+            // Cambiar el fondo a blanco
+            document.body.style.backgroundColor = '#f8f9fa';
+            document.body.style.overflowY = 'auto';
+        }
+    </script>
+    
+    <script>
+        // Mostrar la caja inicial
+        document.getElementById('gift-box').style.display = 'flex';
+
+        function openGift() {
+            // Ocultar la caja de regalo
+            document.getElementById('gift-box').style.display = 'none';
+            // Mostrar el contenido
+            document.getElementById('content').style.display = 'block';
+            // Cambiar el fondo a blanco
+            document.body.style.backgroundColor = '#f8f9fa';
+            document.body.style.overflowY = 'auto';
+
+            // Reproducir música
+            const audio = document.getElementById('christmas-music');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
